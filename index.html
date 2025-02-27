@@ -10,28 +10,28 @@
     <title>Payoo-Mobile-App</title>
 </head>
 <body class="bg-slate-800">
-    <section class="max-w-md min-h-screen mx-auto bg-gray-200 py-6">
+    <section class="max-w-md min-h-screen py-6 mx-auto bg-gray-200">
 
         <header>
-            <nav class="flex justify-center items-center mt-6">
-                <div class="mt-10 relative flex justify-center items-center w-9/12 mb-10">
-                    <img class="w-48 absolute" src="assets/bg.png" alt="">
+            <nav class="flex items-center justify-center mt-6">
+                <div class="relative flex items-center justify-center w-9/12 mt-10 mb-10">
+                    <img class="absolute w-48" src="assets/bg.png" alt="">
                     <img class="w-16" src="assets/Group.png" alt="">
                 </div>
             </nav>
         </header>
 
         <!-- login section -->
-        <div class="hero  ">
-            <div class="hero-content flex-col lg:flex-row-reverse">
+        <div class="hero ">
+            <div class="flex-col hero-content lg:flex-row-reverse">
              
-              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <div class="w-full max-w-sm shadow-2xl card bg-base-100 shrink-0">
                 <form class="card-body">
                   <div class="form-control">
                     <label class="label">
-                      <span class="label-text">Account Number</span>
+                      <span class="label-text">Mobile Number</span>
                     </label>
-                    <input id="Account-number" type="number" placeholder="11 digit account number" class="input input-bordered" required />
+                    <input id="Account-number" type="number" placeholder="Enter your number" class="input input-bordered" required />
                   </div>
                   <div class="form-control">
                     <label class="label">
@@ -42,7 +42,7 @@
                       <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                     </label>
                   </div>
-                  <div class="form-control mt-6">
+                  <div class="mt-6 form-control">
                     <button id="login-btn" class="btn btn-primary">Login</button>
                   </div>
                 </form>
