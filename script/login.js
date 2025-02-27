@@ -11,10 +11,10 @@ document.getElementById('login-btn').addEventListener('click',function(event){
       window.location.href="../main.html"
     }
     else {
-        
+      alert("Invalid Password")
     }
    }
    else {
-    console.log('Type valid number')
+    alert("Invalid Number")
    }
 })
