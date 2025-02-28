@@ -15,7 +15,7 @@
   </head>
   <body class=" bg-slate-800">
     <section class="max-w-md min-h-screen mx-auto bg-gray-200">
-      <header class="bg-base-100 rounded-b-3xl">
+      <header class="bg-base-100 rounded-b-3xl ">
         <nav
           class="flex items-center justify-around py-2 border-b border-black border-opacity-20">
           <img class="w-16 mb-2" src="assets/Group.png" alt>
@@ -43,14 +43,15 @@
           <div class="grid grid-cols-3 gap-2 p-2 mt-10 cards">
             <!-- 1st -->
             <div
-              class="box-border p-4 text-center bg-white cursor-pointer border-[#080808] box rounded-xl  border border-opacity-15">
+              class="box-border p-4 text-center bg-white cursor-pointer border-[#080808] box rounded-xl  border border-opacity-15"
+              id="add-money-box">
               <img class="w-8 mx-auto" src="assets/wallet1.png" alt>
               <h3>Add Money</h3>
             </div>
 
             <!-- 2nd -->
             <div
-              class="box-border p-4 text-center bg-white cursor-pointer border-[#080808] box rounded-xl  border border-opacity-15">
+              class="box-border p-4 text-center bg-white cursor-pointer border-[#080808] box rounded-xl  border border-opacity-15" id="cashout-box">
               <img class="w-8 mx-auto" src="assets/money1.png" alt>
               <h3>Cashout</h3>
             </div>
@@ -84,7 +85,7 @@
 
       </header>
 
-      <section class="mt-10">
+      <section class="mt-10 " id="add-money-form">
 
         <h1 class="pl-6 text-xl font-bold">Add Money</h1>
         <!-- form -->
@@ -110,14 +111,14 @@
                     <span class="label-text">Account Number</span>
                   </label>
                   <input id="Account-number" type="number"
-                    placeholder="11 digit account number"
+                    placeholder="Enter 11 digit number"
                     class="input input-bordered" required />
 
                   <label class="label">
                     <span class="label-text">Amount to Add</span>
                   </label>
                   <input id="amount" type="number"
-                    placeholder="Add Amount to withdraw"
+                    placeholder="Enter Amount to Add"
                     class="input input-bordered" required />
                 </div>
 
@@ -125,7 +126,7 @@
                   <label class="label">
                     <span class="label-text">Password</span>
                   </label>
-                  <input id="password" type="password" placeholder="password"
+                  <input id="password" type="password" placeholder="Password"
                     class="input input-bordered" required />
                   <label class="label">
                     <a href="#" class="label-text-alt link link-hover">Forgot
@@ -141,8 +142,58 @@
           </div>
         </div>
       </section>
+      <!-- cash out section -->
+
+       
+      <section class="mt-10 " id="cash-out-form">
+
+        <h1 class="pl-6 text-xl font-bold">Cash Out</h1>
+        <!-- form -->
+        <div class>
+
+          <div class="flex-col hero-content lg:flex-row-reverse ">
+
+            <div class="w-full max-w-sm shadow-2xl card shrink-0 bg-base-100">
+              <form class="card-body">
+               
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Agent Number</span>
+                  </label>
+                  <input id="agent-number" type="number"
+                    placeholder="Enter 11 digit number"
+                    class="input input-bordered" required />
+
+                  <label class="label">
+                    <span class="label-text">Amount</span>
+                  </label>
+                  <input id="withdraw-amount" type="number"
+                    placeholder="Add Amount to withdraw"
+                    class="input input-bordered" required />
+                </div>
+
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Password</span>
+                  </label>
+                  <input id="cash-out-password" type="password" placeholder="Password"
+                    class="input input-bordered" required />
+                  <label class="label">
+                    <a href="#" class="label-text-alt link link-hover">Forgot
+                      password?</a>
+                  </label>
+                </div>
+                <div class="mt-6 form-control">
+                  <button id="withdraw" class="bg-blue-700 btn btn-primary">Withdraw Money</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
 
     <script src="script/add_money.js"></script>
+    <script src="script/toggle.js"></script>
   </body>
 </html>
