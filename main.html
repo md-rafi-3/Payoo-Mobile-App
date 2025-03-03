@@ -10,6 +10,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="shortcut icon" href="payoo.png" type="image/x-icon">
     <title>Main</title>
 
   </head>
@@ -57,20 +58,20 @@
             </div>
             <!-- 3rd -->
             <div
-              class="box-border p-4 text-center bg-white cursor-pointer border-[#080808] box rounded-xl  border border-opacity-15">
+              class="box-border p-4 text-center bg-white cursor-pointer border-[#080808] box rounded-xl  border border-opacity-15" id="transfer-box" >
               <img class="w-8 mx-auto" src="assets/send1.png" alt>
               <h3>Transfer Money</h3>
             </div>
 
             <!-- 4th -->
             <div
-              class="box-border p-4 text-center bg-white cursor-pointer border-[#080808] box rounded-xl  border border-opacity-15">
+              class="box-border p-4 text-center bg-white cursor-pointer border-[#080808] box rounded-xl  border border-opacity-15" id="bonus-box">
               <img class="w-8 mx-auto" src="assets/bonus1.png" alt>
               <h3>Get Bonus</h3>
             </div>
             <!-- 5th -->
             <div
-              class="box-border p-4 text-center bg-white cursor-pointer border-[#080808] box rounded-xl  border border-opacity-15">
+             id="bill-box" class="box-border p-4 text-center bg-white cursor-pointer border-[#080808] box rounded-xl  border border-opacity-15">
               <img class="w-8 mx-auto" src="assets/purse1.png" alt>
               <h3>Pay Bill</h3>
             </div>
@@ -89,7 +90,7 @@
 
         <h1 class="pl-6 text-xl font-bold">Add Money</h1>
         <!-- form -->
-        <div class>
+        <div >
 
           <div class="flex-col hero-content lg:flex-row-reverse ">
 
@@ -149,7 +150,7 @@
 
         <h1 class="pl-6 text-xl font-bold">Cash Out</h1>
         <!-- form -->
-        <div class>
+        <div >
 
           <div class="flex-col hero-content lg:flex-row-reverse ">
 
@@ -191,6 +192,148 @@
           </div>
         </div>
       </section>
+      
+      
+      <!-- transfer money -->
+      <section class="mt-10 " id="transfer-money-form">
+
+        <h1 class="pl-6 text-xl font-bold">Transfer Money</h1>
+        <!-- form -->
+        <div >
+
+          <div class="flex-col hero-content lg:flex-row-reverse ">
+
+            <div class="w-full max-w-sm shadow-2xl card shrink-0 bg-base-100">
+              <form class="card-body">
+               
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">User Account Number</span>
+                  </label>
+                  <input id="user-number" type="number"
+                    placeholder="Enter 11 digit number"
+                    class="input input-bordered" required />
+
+                  <label class="label">
+                    <span class="label-text">Amount</span>
+                  </label>
+                  <input id="transfer-amount" type="number"
+                    placeholder="Enter amount to transfer"
+                    class="input input-bordered" required />
+                </div>
+
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Password</span>
+                  </label>
+                  <input id="transfer-password" type="password" placeholder="Password"
+                    class="input input-bordered" required />
+                  <label class="label">
+                    <a href="#" class="label-text-alt link link-hover">Forgot
+                      password?</a>
+                  </label>
+                </div>
+                <div class="mt-6 form-control">
+                  <button id="send" class="bg-blue-700 btn btn-primary">Send Now</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      
+      <!-- Get bonus section -->
+      <section class="mt-10 " id="bonus-form">
+
+        <h1 class="pl-6 text-xl font-bold">Get Bonus</h1>
+      <div >
+
+        <div class="flex-col hero-content lg:flex-row-reverse ">
+
+          <div class="w-full max-w-sm shadow-2xl card shrink-0 bg-base-100">
+            <form class="card-body">
+             
+              <div class="form-control">
+               
+
+                <label class="label">
+                  <span class=" label-text">Enter Bonus Coupon</span>
+                </label>
+                <input id="bonus-coupon" type="text"
+                  placeholder="Enter your coupon"
+                  class="input input-bordered" required />
+              </div>
+
+             
+              <div class="mt-6 form-control">
+                <button id="bonus" class="bg-blue-700 btn btn-primary">Get Bonus</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <!-- pay bill section -->
+    <section class="mt-10 " id="bill-form">
+
+      <h1 class="pl-6 text-xl font-bold">Add Money</h1>
+      <!-- form -->
+      <div >
+
+        <div class="flex-col hero-content lg:flex-row-reverse ">
+
+          <div class="w-full max-w-sm shadow-2xl card shrink-0 bg-base-100">
+            <form class="card-body">
+              <legend>Select To Pay</legend>
+
+              <select class="w-full max-w-xs select select-bordered">
+                <option disabled selected>Select Method</option>
+                <option value="Gas">Gas</option>
+                <option value="Electricity">Electricity</option>
+
+                <option value="Internet">Internet</option>
+
+              </select>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Biller Account Number</span>
+                </label>
+                <input id="bill-number" type="number"
+                  placeholder="Enter account number"
+                  class="input input-bordered" required />
+
+                <label class="label">
+                  <span class="label-text">Amount to Pay</span>
+                </label>
+                <input id="bill-amount" type="number"
+                  placeholder="Add Amount to pay"
+                  class="input input-bordered" required />
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Password</span>
+                </label>
+                <input id="bill-password" type="password" placeholder="Password"
+                  class="input input-bordered" required />
+                <label class="label">
+                  <a href="#" class="label-text-alt link link-hover">Forgot
+                    password?</a>
+                </label>
+              </div>
+              <div class="mt-6 form-control">
+                <button id="bill-btn" class="bg-blue-700 btn btn-primary">Pay Now</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
     </section>
 
     <script src="script/add_money.js"></script>
