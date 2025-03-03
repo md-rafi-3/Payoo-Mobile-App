@@ -6,6 +6,8 @@ document.getElementById('transfer-money-form').style.display="none";
 
 document.getElementById('bill-form').style.display = 'none';
 
+document.getElementById('bonus-form').style.display = 'none';
+
 
 
 document.getElementById('add-money-box').addEventListener('click', function(){
