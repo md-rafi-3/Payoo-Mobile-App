@@ -8,7 +8,7 @@ document.getElementById('login-btn').addEventListener('click',function(event){
    
    if(accountNumber === "01618802042"){
     if(parseInt(pin) === 1234){
-      window.location.href="../main.html"
+      window.location.href="./main.html"
     }
     else {
       alert("Invalid Password")
